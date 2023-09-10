@@ -7,7 +7,6 @@ authors: ["Ushitora Anqou"]
 license: "MIT"
 tags: ["blurhash"]
 homepage: "https://github.com/ushitora-anqou/ocaml-blurhash"
-doc: "https://github.com/ushitora-anqou/ocaml-blurhash"
 bug-reports: "https://github.com/ushitora-anqou/ocaml-blurhash/issues"
 depends: [
   "alcotest" {with-test}

@@ -13,8 +13,6 @@
 
 (license "MIT")
 
-(documentation https://github.com/ushitora-anqou/ocaml-blurhash)
-
 (package
  (name blurhash)
  (synopsis "A BlurHash encoder in OCaml")
