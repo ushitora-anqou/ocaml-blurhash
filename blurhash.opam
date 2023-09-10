@@ -12,7 +12,7 @@ depends: [
   "alcotest" {with-test}
   "camlimages" {with-test}
   "dune" {>= "3.3"}
-  "ocaml" {>= "4.08.0" & < "5.0"}
+  "ocaml" {>= "4.08.0"}
   "odoc" {with-doc}
 ]
 build: [
