@@ -23,6 +23,6 @@
   dune
   (ocaml
    (and
-    (>= 4.07.0)
+    (>= 4.08.0)
     (< 5.0))))
  (tags (blurhash)))
