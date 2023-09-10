@@ -2,6 +2,8 @@
 
 A [Blurhash](https://blurha.sh/) encoder implementation written in OCaml.
 
+[Documentation](https://ushitora-anqou.github.io/ocaml-blurhash/).
+
 ## Usage
 
 The only function provided by ocaml-blurhash is `Blurhash.blur_hash_for_pixels`,
