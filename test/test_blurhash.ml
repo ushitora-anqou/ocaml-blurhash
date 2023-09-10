@@ -1,27 +1,3 @@
-# ocaml-blurhash
-
-A [Blurhash](https://blurha.sh/) encoder implementation written in OCaml.
-
-## Usage
-
-The only function provided by ocaml-blurhash is `Blurhash.blur_hash_for_pixels`,
-which accepts the same arguments of `blurHashForPixels` in [the C reference implementation](https://github.com/woltapp/blurhash/tree/master/C).
-
-```ocaml
-val blur_hash_for_pixels :
-  x_components:int ->
-  y_components:int ->
-  width:int ->
-  height:int ->
-  bytes_per_row:int ->
-  string ->
-  string
-```
-
-Although ocaml-blurhash does not depend on any image library,
-you can use [Camlimages](https://gitlab.com/camlspotter/camlimages) to load an image from a file.
-
-```ocaml
 let load_image_as_rgb24 ~path =
   match OImages.(load path [] |> tag) with
   | Rgb24 img -> img
@@ -39,8 +15,7 @@ let test_encode_case1 () =
   let hash = blurhash ~x_components:4 ~y_components:3 src in
   Alcotest.(check string) "test1" "LFE.@D9F01_2%L%MIVD*9Goe-;WB" hash;
   ()
-```
 
-## License
-
-MIT
+let () =
+  let open Alcotest in
+  run "blurhash" [ ("encode", [ test_case "case1" `Quick test_encode_case1 ]) ]

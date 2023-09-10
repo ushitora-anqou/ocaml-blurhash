@@ -1,0 +1,3 @@
+(library
+ (name blurhash)
+ (public_name blurhash))
