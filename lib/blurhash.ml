@@ -28,7 +28,7 @@ let encode_int =
           aux (x / 83) (i - 1)
     in
     aux value length;
-    String.of_bytes buf
+    Bytes.to_string buf
 
 let encode_ac ~r ~g ~b ~max_value =
   let quantize x =

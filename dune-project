@@ -22,5 +22,7 @@
   (camlimages :with-test)
   dune
   (ocaml
-   (< 5.0)))
+   (and
+    (>= 4.07.0)
+    (< 5.0))))
  (tags (blurhash)))
