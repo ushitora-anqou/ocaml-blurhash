@@ -9,9 +9,9 @@ tags: ["blurhash"]
 homepage: "https://github.com/ushitora-anqou/ocaml-blurhash"
 bug-reports: "https://github.com/ushitora-anqou/ocaml-blurhash/issues"
 depends: [
+  "dune" {>= "3.3"}
   "alcotest" {with-test}
   "camlimages" {with-test}
-  "dune" {>= "3.3"}
   "ocaml" {>= "4.08.0"}
   "odoc" {with-doc}
 ]

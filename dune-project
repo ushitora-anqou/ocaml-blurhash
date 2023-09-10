@@ -4,6 +4,8 @@
 
 (generate_opam_files true)
 
+(implicit_transitive_deps false)
+
 (source
  (github ushitora-anqou/ocaml-blurhash))
 
@@ -20,7 +22,6 @@
  (depends
   (alcotest :with-test)
   (camlimages :with-test)
-  dune
   (ocaml
    (>= 4.08.0)))
  (tags (blurhash)))
