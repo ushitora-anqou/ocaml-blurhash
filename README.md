@@ -5,7 +5,7 @@ A [Blurhash](https://blurha.sh/) encoder implementation written in OCaml.
 ## Usage
 
 The only function provided by ocaml-blurhash is `Blurhash.blur_hash_for_pixels`,
-which accepts the same arguments of `blurHashForPixels` in [the C reference implementation](https://github.com/woltapp/blurhash/tree/master/C).
+which takes the same arguments as `blurHashForPixels` in [the C reference implementation](https://github.com/woltapp/blurhash/tree/master/C).
 
 ```ocaml
 val blur_hash_for_pixels :
@@ -19,7 +19,7 @@ val blur_hash_for_pixels :
 ```
 
 Although ocaml-blurhash does not depend on any image library,
-you can use [Camlimages](https://gitlab.com/camlspotter/camlimages) to load an image from a file.
+you can use [camlimages](https://gitlab.com/camlspotter/camlimages) to load an image from a file.
 
 ```ocaml
 let load_image_as_rgb24 ~path =
