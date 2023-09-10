@@ -8,7 +8,7 @@ let load_image_as_rgb24 ~path =
 
 let blurhash ~x_components ~y_components src =
   Blurhash.blur_hash_for_pixels ~x_components ~y_components ~width:src#width
-    ~height:src#height ~bytes_per_row:(src#width * 3) (Bytes.to_string src#dump)
+    ~height:src#height ~bytes_per_row:(src#width * 3) src#dump
 
 let test_encode_case1 () =
   let src = load_image_as_rgb24 ~path:"../../../test/test.ppm" in

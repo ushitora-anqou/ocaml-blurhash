@@ -69,7 +69,7 @@ let multiply_basis_function ~x_component ~y_component ~width ~height ~rgb
         v
         +. basis
            *. srgb_to_linear
-                (String.get_uint8 rgb ((3 * x) + i + (y * bytes_per_row)))
+                (Bytes.get_uint8 rgb ((3 * x) + i + (y * bytes_per_row)))
       in
       aux (f r 0, f g 1, f b 2) (i + 1)
   in
