@@ -1,7 +1,3 @@
-let iota n =
-  let rec f acc = function 0 -> acc | n -> f ((n - 1) :: acc) (n - 1) in
-  f [] n
-
 let sign_pow v e = if v < 0.0 then -.(Float.pow (-.v) e) else Float.pow v e
 
 let linear_to_srgb (value : float) : int =
@@ -84,12 +80,12 @@ let blur_hash_for_pixels ~x_components ~y_components ~width ~height
   if y_components < 1 || y_components > 9 then failwith "Invalid y_components";
 
   let factors =
-    iota (x_components * y_components)
-    |> List.map (fun i ->
-           let x_component = i mod x_components in
-           let y_component = i / x_components in
-           multiply_basis_function ~x_component ~y_component ~width ~height ~rgb
-             ~bytes_per_row)
+    List.init (x_components * y_components)
+      (fun i ->
+        let x_component = i mod x_components in
+        let y_component = i / x_components in
+        multiply_basis_function ~x_component ~y_component ~width ~height ~rgb
+          ~bytes_per_row)
   in
 
   let dc_r, dc_g, dc_b = List.hd factors in
