@@ -80,8 +80,7 @@ let blur_hash_for_pixels ~x_components ~y_components ~width ~height
   if y_components < 1 || y_components > 9 then failwith "Invalid y_components";
 
   let factors =
-    List.init (x_components * y_components)
-      (fun i ->
+    List.init (x_components * y_components) (fun i ->
         let x_component = i mod x_components in
         let y_component = i / x_components in
         multiply_basis_function ~x_component ~y_component ~width ~height ~rgb
